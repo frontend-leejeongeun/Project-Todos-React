@@ -28,26 +28,20 @@
 
 ## 파일 구조
 
-src/
-├── App.css # 스타일링을 위한 CSS 파일
-├── App.js # 할 일 관리 기능을 처리하는 메인 React 컴포넌트
-└── index.js # 애플리케이션의 진입점
-public/
-└── index.html # HTML 템플릿
-README.md # 이 파일
+src/ ├── App.css # 스타일링을 위한 CSS 파일 ├── App.js # 할 일 관리 기능을 처리하는 메인 React 컴포넌트 └── index.js # 애플리케이션의 진입점 public/ └── index.html # HTML 템플릿
 
 ## 설치 방법
 
 1. 레포지토리를 클론합니다:
 
    ```bash
-   git clone https://github.com/frontend-leejeongeun/Todos-React
+   git clone https://github.com/frontend-leejeongeun/Todos-React.git
    ```
 
 2. 의존성을 설치합니다:
 
    ```bash
-   cd todo-app
+   cd todos-react
    npm install
    ```
 
