@@ -28,7 +28,12 @@
 
 ## 파일 구조
 
-src/ ├── App.css # 스타일링을 위한 CSS 파일 ├── App.js # 할 일 관리 기능을 처리하는 메인 React 컴포넌트 └── index.js # 애플리케이션의 진입점 public/ └── index.html # HTML 템플릿
+src/  
+ ├── App.css # 스타일링을 위한 CSS 파일  
+ ├── App.js # 할 일 관리 기능을 처리하는 메인 React 컴포넌트  
+ └── index.js # 애플리케이션의 진입점  
+public/  
+ └── index.html # HTML 템플릿
 
 ## 설치 방법
 
