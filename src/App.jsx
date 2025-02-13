@@ -68,7 +68,7 @@ function App() {
 
   return (
     <section className="todo-wrapper">
-      <header className="todo-title">todos</header>
+      <header className="todo-title">todos react</header>
       <main className="todo-box">
         <div className="todo-input-box">
           <button className="complete-all-btn" onClick={handleCompleteAll}>
