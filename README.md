@@ -29,6 +29,10 @@
 ## 파일 구조
 
 src/  
+ └── components/
+     └── Header.jsx
+     └── Main.jsx
+     └── Footer.jsx
  ├── App.css # 스타일링을 위한 CSS 파일  
  ├── App.js # 할 일 관리 기능을 처리하는 메인 React 컴포넌트  
  └── index.js # 애플리케이션의 진입점  
