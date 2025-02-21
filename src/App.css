@@ -26,6 +26,7 @@ body {
 .todo-box {
   background-color: white;
   border: 1px solid #ddd;
+  position: relative;
 }
 
 .todo-input-box {
@@ -53,6 +54,9 @@ button {
   border-radius: 50px;
   cursor: pointer;
   font-size: 1.2rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .complete-all-btn.checked {
