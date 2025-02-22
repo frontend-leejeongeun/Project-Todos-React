@@ -16,6 +16,15 @@ export default function Main() {
     ]);
   }, []);
 
+  // 할 일 수정 기능 추가
+  const handleEditTodo = useCallback((todoId, newContent) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === todoId ? { ...todo, content: newContent } : todo
+      )
+    );
+  }, []);
+
   // 전체 완료 처리
   const handleCompleteAll = useCallback(() => {
     setTodos((prevTodos) => {
@@ -77,6 +86,7 @@ export default function Main() {
         handleCheckTodo={handleCheckTodo}
         handleDeleteTodo={handleDeleteTodo}
         filteredTodos={filteredTodos}
+        handleEditTodo={handleEditTodo}
       />
       <TodoFilter
         getLeftItemsCount={getLeftItemsCount}
