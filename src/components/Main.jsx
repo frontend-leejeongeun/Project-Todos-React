@@ -29,14 +29,14 @@ export default function Main() {
   }, [todos]);
 
   // 필터 버튼 클릭 시 호출
-  const handleShowTodosType = useCallback((type) => {
+  const handleShowTodosType = (type) => {
     setCurrentShowType(type);
-  }, []);
+  };
 
   // 완료된 할 일 삭제
-  const handleClearCompletedTodos = useCallback(() => {
+  const handleClearCompletedTodos = () => {
     setTodos((prevTodos) => prevTodos.filter((todo) => !todo.isCompleted));
-  }, []);
+  };
 
   // 할 일 체크(완료/미완료)
   const handleCheckTodo = useCallback((todoId) => {
