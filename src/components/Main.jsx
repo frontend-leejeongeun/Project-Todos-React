@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo } from "react";
+import { v4 as uuidv4 } from "uuid";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import TodoFilter from "./TodoFilter";
@@ -11,7 +12,7 @@ export default function Main() {
   const addTodo = useCallback((content) => {
     setTodos((prevTodos) => [
       ...prevTodos,
-      { id: Date.now(), content: content, isCompleted: false },
+      { id: uuidv4(), content: content, isCompleted: false },
     ]);
   }, []);
 
