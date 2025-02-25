@@ -33,25 +33,21 @@
 - **handleClearCompletedTodos**: 완료된 할 일을 모두 삭제
 
 ## 파일 구조
-
-todos-react/
-├── public/  
-│
 ├── src/
-│ ├── components/ # 재사용 가능한 컴포넌트 디렉토리
-│ │ ├── Header.tsx # 헤더 컴포넌트
-│ │ ├── Main.tsx # 메인 콘텐츠 컴포넌트
-│ │ ├── Footer.tsx # 푸터 컴포넌트
-│ │ ├── TodoFilter.tsx # 할일 필터 컴포넌트
-│ │ ├── TodoInput.tsx # 할일 인풋 컴포넌트
-│ │ └── TodoList.tsx # 할일 리스트 컴포넌트
-│ ├── hooks/ # 커스텀 훅 디렉토리
-│ │ └── useTodoQueries.ts # 할 일 관련 쿼리 훅
-│ ├── store/ # MobX 스토어 디렉토리
-│ │ └── store.ts # 할 일 상태 관리 스토어
-│ ├── App.tsx # 할 일 관리 기능을 처리하는 메인 React 컴포넌트
-│ ├── main.tsx # 애플리케이션의 진입점
-│ └── index.css # 스타일링을 위한 CSS 파일
+│  ├── components/ # 재사용 가능한 컴포넌트 디렉토리
+│  │  ├── Header.tsx # 헤더 컴포넌트
+│  │  ├── Main.tsx # 메인 콘텐츠 컴포넌트
+│  │  ├── Footer.tsx # 푸터 컴포넌트
+│  │  ├── TodoFilter.tsx # 할일 필터 컴포넌트
+│  │  ├── TodoInput.tsx # 할일 인풋 컴포넌트
+│  │  └── TodoList.tsx # 할일 리스트 컴포넌트
+│  ├── hooks/ # 커스텀 훅 디렉토리
+│  │  └── useTodoQueries.ts # 할 일 관련 쿼리 훅
+│  ├── store/ # MobX 스토어 디렉토리
+│  │  └── store.ts # 할 일 상태 관리 스토어
+│  ├── App.tsx # 할 일 관리 기능을 처리하는 메인 React 컴포넌트
+│  ├── main.tsx # 애플리케이션의 진입점
+│  └── index.css # 스타일링을 위한 CSS 파일
 ├── index.html # HTML 템플릿
 ├── db.json # JSON 서버를 위한 데이터베이스 파일
 ├── package.json # 프로젝트 설정 파일
