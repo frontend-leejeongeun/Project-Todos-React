@@ -1,17 +1,24 @@
-import React, { useState } from "react";
-export default function TodoInput({ addTodo }) {
-  const [newTodo, setNewTodo] = useState("");
+import React, { useState, ChangeEvent, KeyboardEvent } from "react";
+
+interface TodoInputProps {
+  addTodo: (content: string) => void;
+}
+
+export default function TodoInput({ addTodo }: TodoInputProps) {
+  const [newTodo, setNewTodo] = useState<string>("");
 
   // 새로운 할 일 입력 처리
-  const handleInputChange = (e) => setNewTodo(e.target.value);
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setNewTodo(e.target.value);
 
   // 엔터 키 눌렀을 때 새로운 할 일 추가
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && newTodo.trim() !== "") {
       addTodo(newTodo);
       setNewTodo(""); // 입력창 초기화
     }
   };
+
   return (
     <div className="todo-input-box">
       <input

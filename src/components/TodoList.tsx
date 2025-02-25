@@ -1,31 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, KeyboardEvent } from "react";
+import { Todo } from "../store";
+
+interface TodoListProps {
+  handleCheckTodo: (id: string) => void;
+  handleDeleteTodo: (id: string) => void;
+  filteredTodos: Todo[];
+  handleEditTodo: (id: string, content: string) => void;
+}
 
 export default function TodoList({
   handleCheckTodo,
   handleDeleteTodo,
   filteredTodos,
-  handleEditTodo, // 수정 함수 추가
-}) {
-  const [editingId, setEditingId] = useState(null);
-  const [editContent, setEditContent] = useState("");
+  handleEditTodo,
+}: TodoListProps) {
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editContent, setEditContent] = useState<string>("");
 
-  const handleDoubleClick = (todo) => {
+  const handleDoubleClick = (todo: Todo) => {
     setEditingId(todo.id);
     setEditContent(todo.content);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEditContent(e.target.value);
   };
 
   const handleBlur = () => {
-    if (editContent.trim()) {
+    if (editContent.trim() && editingId) {
       handleEditTodo(editingId, editContent);
     }
     setEditingId(null);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleBlur();
     }
