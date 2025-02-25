@@ -1,4 +1,8 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, configure } from "mobx";
+
+configure({
+  enforceActions: "always",
+});
 
 export interface Todo {
   id: string;
