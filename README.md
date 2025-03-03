@@ -77,6 +77,7 @@
    ```bash
    cd todos-react
    npm install
+   npm install -g json-server
    ```
 
 3. 애플리케이션을 실행합니다:
